@@ -13,6 +13,17 @@ type alias Joke =
     }
 
 
+initJoke : String -> Int -> Joke
+initJoke id now =
+    { id = id
+    , title = "Untitled Joke"
+    , text = ""
+    , tags = []
+    , time = Nothing
+    , createDate = now
+    }
+
+
 type alias SetList =
     { id : String
     , title : String

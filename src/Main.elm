@@ -58,17 +58,6 @@ initSearchOpts =
     }
 
 
-initJoke : String -> Int -> Joke
-initJoke id now =
-    { id = id
-    , title = "Untitled Joke"
-    , text = ""
-    , tags = []
-    , time = Nothing
-    , createDate = now
-    }
-
-
 init : ( Model, Cmd Msg )
 init =
     let
@@ -201,7 +190,7 @@ view { uiState, data } =
                     p [] [ text "oops" ]
 
                 Just joke ->
-                    div []
+                    div [ class "poop" ]
                         [ h2 [] [ text joke.title ]
                         , textarea
                             [ onInput (UpdateJoke id) ]
